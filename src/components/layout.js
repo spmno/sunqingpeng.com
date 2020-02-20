@@ -30,7 +30,7 @@ const Layout = ({ location, title, children }) => {
     )
   } else {
     header = (
-      <h2
+      <h1
         style={{
           fontFamily: `Montserrat, sans-serif`,
           marginTop: 0,
@@ -46,7 +46,7 @@ const Layout = ({ location, title, children }) => {
         >
           {title}
         </Link>
-      </h2>
+      </h1>
     )
   }
   return (
