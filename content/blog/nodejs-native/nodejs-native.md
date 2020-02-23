@@ -2,6 +2,7 @@
 title: nodejs与cpp相互调用
 date: "2020-02-21T19:08:03.284Z"
 description: "通过CPP实现nodejs与native层互相调用"
+tags: ["nodejs", "native", "cpp", "n-api"]
 ---
 
 Nodejs 与 native交互有3种方式：N-API，nan，直接使用V8，libuv及nodejs库。  

@@ -2,6 +2,7 @@
 title: Nginx配置与命令
 date: "2020-02-18T10:13:03.284Z"
 description: "Nginx的常用配置与命令"
+tags: ["nginx", "linux", "server"]
 ---
 
 安装Nginx:  

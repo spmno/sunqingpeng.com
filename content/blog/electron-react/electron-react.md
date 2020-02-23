@@ -2,6 +2,7 @@
 title: 搭建electron react环境
 date: "2020-02-20T12:15:03.284Z"
 description: "用electron react配合搭建环境开发PC程序，提高开发效率"
+tags: ["react", "electron"]
 ---
 
 版本React 16.12，electron 8.0  

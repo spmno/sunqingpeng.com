@@ -2,6 +2,7 @@
 title: Ubuntu文件监控数量限制
 date: "2020-02-17T10:15:03.284Z"
 description: "ENOSPC:System limit for number of file watchers reached"
+tags: ["ubuntu", "file", "limit"]
 ---
 
 在使用Ubuntu进行NODEJS开发时，可能会遇到这个错误。
