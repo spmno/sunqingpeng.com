@@ -5,7 +5,7 @@ module.exports = {
     description: `平时写一些技术文章`,
     siteUrl: `http://sunmou.cn`,
     social: {
-      twitter: `kylemathews`,
+      weixin: `zhongyichengxuyuan`,
     },
   },
   plugins: [

@@ -25,7 +25,7 @@ const Bio = () => {
         siteMetadata {
           author
           social {
-            twitter
+            weixin
           }
         }
       }
@@ -54,9 +54,9 @@ const Bio = () => {
         }}
       />
       <p>
-        作者 <strong>{author}</strong> ，是一位JS爱好者，加嵌入式程序员。
+        作者 <strong>{author}</strong> ，是一位JS爱好者，嵌入式程序员。
         <br />
-        微信：zhongyichengxuyuan
+        微信：{social.weixin}
       </p>
     </div>
   )
