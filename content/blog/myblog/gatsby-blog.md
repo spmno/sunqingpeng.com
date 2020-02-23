@@ -13,10 +13,10 @@ tags: ["gatsby", "blog"]
 
 根据自己的信息，修改`gatsby-config`文件。
 
-title: 博客标题，显示在首页的最上面。
-author, description: 作者及博客相关描述。
-siteUrl: 博客地址。
-social: 原来是作者的twitter，可以改成我们的微信ID。
+title: 博客标题，显示在首页的最上面。  
+author, description: 作者及博客相关描述。  
+siteUrl: 博客地址。  
+social: 原来是作者的twitter，可以改成我们的微信ID。  
 
 增加[百度统计](tongji.baidu.com)：
 `yarn add gatsby-plugin-baidu-tongji`
@@ -27,9 +27,9 @@ social: 原来是作者的twitter，可以改成我们的微信ID。
         head: false
       }
 
-加到plugins的子项里面。
+加到文件的plugins的子项里面。
 
-基本配置后，gatsby develop就可以在 <http://localhost:8000>  看到博客的基本效果了。
+基本配置后，`gatsby develop` 就可以在 <http://localhost:8000>  看到博客的基本效果了。
 在content的blog目录下，写markdown文件，就可以显示到自己的博客里了。
 
 2. 分页
@@ -39,11 +39,12 @@ social: 原来是作者的twitter，可以改成我们的微信ID。
 在原来的模板中，index.js 负责主页的显示。如果分页的话，应该需要自己写代码建立主页了。
 
 从[gastby的文档](https://www.gatsbyjs.org/docs/creating-and-modifying-pages/)里可以知道，建立页面的方法一共3种：
-*在pages的目录下建立React Component。
-*在gatsby-node.js文件中，实现createPages函数中，用createPage函数。
-*在插件中实现createPages方法。
+  - 在pages的目录下建立React Component。
+  - 在gatsby-node.js文件中，实现createPages函数中，用createPage函数。
+  - 在插件中实现createPages方法。
 
-之前我们用的是第一种方面，接下来我们需要用第二种方法。我们先删除pages/index.js，这个已经没有用了。
+之前我们用的是第一种方面，接下来我们需要用第二种方法。  
+我们先删除pages/index.js，这个已经没有用了。
 在templates/目录下，建立分页式主页的模板，./templates/blog-list.js，内容如下：
 ```
 import React from 'react'
@@ -185,14 +186,13 @@ export const pageQuery = graphql`
         },
       });
     });
-    ```
-    上面的代码根据每页要显示的数量去计算需要创建的页面。
-
+```
+  上面的代码根据每页要显示的数量去计算需要创建的页面。  
 到目前为止，一个有分页功能博客就建立完成。
 
 参考链接：
 
-通过模板建立最简单博客：<https://www.gatsbyjs.org/tutorial/using-a-theme/>
+通过模板建立最简单博客：<https://www.gatsbyjs.org/tutorial/using-a-theme/>  
 建立分页：<https://www.gatsbyjs.org/docs/adding-pagination/>
 
 
