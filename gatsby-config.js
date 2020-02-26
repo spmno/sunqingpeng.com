@@ -78,8 +78,14 @@ module.exports = {
       options: {
         siteid: 'fba288428f358adcc1cf7c844597109a',
         head: false
-      }
+      },
     },  
+    {
+      resolve: 'gatsby-plugin-antd',
+      options: {
+        style: true
+      }
+  }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

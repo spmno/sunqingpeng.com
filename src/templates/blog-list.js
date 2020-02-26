@@ -54,7 +54,7 @@ class BlogIndex extends React.Component {
         >
           {!isFirst && (
             <Link to={prevPage} rel="prev">
-              ← Previous Page
+              ← 上一页
             </Link>
           )}
           {Array.from({ length: numPages }, (_, i) => (
@@ -79,7 +79,7 @@ class BlogIndex extends React.Component {
           ))}
           {!isLast && (
             <Link to={nextPage} rel="next">
-              Next Page →
+              下一页 →
             </Link>
           )}
         </ul>
