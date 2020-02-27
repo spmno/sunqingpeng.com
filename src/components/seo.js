@@ -19,6 +19,7 @@ const SEO = ({ description, lang, meta, title }) => {
             title
             description
             author
+            keywords
           }
         }
       }
@@ -26,6 +27,7 @@ const SEO = ({ description, lang, meta, title }) => {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const keywords = site.siteMetadata.keywords
 
   return (
     <Helmet
@@ -40,6 +42,22 @@ const SEO = ({ description, lang, meta, title }) => {
           content: metaDescription,
         },
         {
+          name: `keywords`,
+          content:  keywords,
+        },
+        {
+          name: `robots`,
+          content:  "all",
+        },
+        {
+          name: `googlebot`,
+          content:  "all",
+        },
+        {
+          name: `baiduspider`,
+          content:  "all",
+        },
+        {
           property: `og:title`,
           content: title,
         },
@@ -51,29 +69,13 @@ const SEO = ({ description, lang, meta, title }) => {
           property: `og:type`,
           content: `website`,
         },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
       ].concat(meta)}
     />
   )
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `zh`,
   meta: [],
   description: ``,
 }

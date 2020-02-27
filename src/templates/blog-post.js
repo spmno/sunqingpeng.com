@@ -12,10 +12,11 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const { previous, next } = pageContext
 
   return (
+    
     <Layout location={location} title={siteTitle}>
       <SEO
         title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
+        description={post.frontmatter.description + ',' + post.frontmatter.tags || post.excerpt}
       />
       <article>
         <header>
@@ -93,6 +94,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        tags
         date(formatString: "MMMM DD, YYYY")
         description
       }

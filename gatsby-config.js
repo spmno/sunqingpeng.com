@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `孙某 Blog`,
-    author: `孙某`,
-    description: `平时写一些技术文章`,
+    author: `孙庆鹏`,
+    description: `技术文章随笔，前沿技术，Android、Flutter、React、Gatsby、C++、JavaScript、嵌入式、汽车电子`,
+    keywords: `前沿技术，Android，Flutter，React，Gatsby，C++，JavaScript，嵌入式，汽车电子`,
     siteUrl: `http://sunmou.cn`,
     social: {
       weixin: `zhongyichengxuyuan`,
