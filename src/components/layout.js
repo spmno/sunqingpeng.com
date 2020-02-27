@@ -63,7 +63,8 @@ const Layout = ({ location, title, children }) => {
       <footer>
         © {new Date().getFullYear()}, Built with
         {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <a href="https://www.gatsbyjs.org">Gatsby</a> &nbsp;&nbsp;&nbsp;
+        <a href="http://beian.miit.gov.cn/" target="_blank"> 辽ICP备18002903号-5</a>
       </footer>
     </div>
   )
