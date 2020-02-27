@@ -40,6 +40,6 @@ Setting -> Plugin，搜索Dart和Flutter，安装。
     
 2. flutter doctor没有找到Android SDK  
     解决方法：  
-    在.bashrc中加入 ANDROID_HOME变量。  
-    `export ANDROID_HOME=/path/to/android/sdk`
+    在.bashrc中加入 ANDROID\_HOME 变量。  
+    `export ANDROID_HOME=/path/to/android/sdk`    
     `export PATH="$PATH:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools"`
