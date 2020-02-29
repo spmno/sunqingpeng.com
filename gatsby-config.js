@@ -92,6 +92,14 @@ module.exports = {
     options: {
       
     }
+  },
+  {
+    resolve: 'gatsby-plugin-robots-txt',
+    options: {
+      host: 'http://www.sunmou.cn',
+      sitemap: 'http://www.sunmou.cn/sitemap.xml',
+      policy: [{ userAgent: '*', allow: '/' }]
+    }
   }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
