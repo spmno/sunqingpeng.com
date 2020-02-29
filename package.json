@@ -5,9 +5,9 @@
   "version": "0.1.0",
   "author": "sunqp",
   "dependencies": {
-    "antd": "^3.26.12",
+    "antd": "^4.0.0",
     "gatsby": "^2.19.7",
-    "gatsby-cli": "^2.8.30",
+    "gatsby-cli": "^2.9.0",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-antd": "^2.1.0",
     "gatsby-plugin-baidu-tongji": "^2.0.0",
