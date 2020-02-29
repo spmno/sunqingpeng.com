@@ -86,6 +86,12 @@ module.exports = {
       options: {
         style: true
       }
+  },
+  {
+    resolve: `gatsby-plugin-sitemap`,
+    options: {
+      
+    }
   }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
