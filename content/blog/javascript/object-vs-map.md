@@ -7,8 +7,8 @@ tags: ["javascript", "object", "map"]
 
 在使用javascript时候，使用[Object](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)与[Map](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map)的时候，概念比较模糊。这里做个对比，具体还需要参考MDN文档。
 
-1. Key的取值：
-   Object：字符串或Symbol
+1. Key的取值：  
+   Object：字符串或Symbol  
    Map：任何值(对象或者原始值)   
 2. 创建方法：  
    Object:   
