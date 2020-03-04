@@ -1,5 +1,8 @@
 ---
 title: javascript Object与Map对比
+date: "2020-03-04T20:28:03.284Z"
+description: "javascript Object与Map对比 "
+tags: ["javascript", "object", "map"]
 ---
 
 在使用javascript时候，使用[Object](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)与[Map](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map)的时候，概念比较模糊。这里做个对比，具体还需要参考MDN文档。
