@@ -21,4 +21,8 @@ Blog内容都是用markdown格式编辑的，把最近用到的markdown语法总
 4. 图片：
 \!\[图片提示\]\(图片地址\)  
 
+5. emoji
+\:表情英文\:，比如： \:grinning\:
+想要什么表情，可以到这个网站找<https://www.webfx.com/tools/emoji-cheat-sheet/>   
+
 以上是这几天用到的，持续更新。
