@@ -1,16 +1,88 @@
-import React from "react"
+import React, { useState, useEffect } from "react";
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import  { Comment, Button, Input, List, Form, message } from 'antd'
+import moment from 'moment'
+import axios from 'axios'
+
+const { TextArea } = Input;
+
+const Editor = ({ onChange, onSubmit,  author, value }) => {
+  return (
+    <div>
+      <Form.Item>
+          留名：<Input name="author" onChange={onChange}  value = {author} />
+      </Form.Item>
+      <Form.Item>
+        <TextArea rows={4} name="comment" onChange={onChange} value={value} />
+      </Form.Item>
+      <Form.Item>
+        <Button htmlType="submit" onClick={onSubmit} type="primary">
+          增加评论
+        </Button>
+      </Form.Item>
+  </div>
+  )
+
+}
+
+
+
+
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
-  const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata.title
-  const { previous, next } = pageContext
 
+  const post = data.markdownRemark;
+  const siteTitle = data.site.siteMetadata.title;
+  const { previous, next } = pageContext;
+  const [dataComment, setDataComment] = useState([]);
+  const [currentAuthor, setCurrentAuthor] = useState("");
+  const [currentComment, setCurrentComment] = useState("");
+  const functionContainer = {author: setCurrentAuthor, comment: setCurrentComment};
+  const commentUrl = 'http://127.0.0.1:1337/comments';
+  const currentDate = new Date();
+
+  useEffect(() => {
+    axios.get(commentUrl)
+      .then((response) => {
+        console.log(response.data);
+        setDataComment(response.data);
+      }).catch((error) => {
+        setDataComment([]);
+        console.log(error);
+      });
+  }, []);
+
+  let handleSubmit = () => {
+    console.log(currentAuthor, currentComment);
+    axios.post(commentUrl,  {
+        blog_title: post.frontmatter.title,
+        author:currentAuthor,
+        content: currentComment,
+        datetime: currentDate
+    }).then((response) => {
+      console.log(response);
+      if (response.status === 200) {
+        dataComment.push(response.data);
+        console.log("datacomment", dataComment);
+        setDataComment(dataComment);
+        message.info("感谢您的评论");
+        setCurrentComment("");
+      }
+    }).catch((error) => {
+      console.log(error);
+      message.error("评论系统出问题了");
+    })
+  }
+
+  let handleChange = (event) => {
+    functionContainer[event.target.name] (event.target.value);
+  }
+  
   return (
     
     <Layout location={location} title={siteTitle}>
@@ -75,6 +147,26 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </li>
         </ul>
       </nav>
+      <List
+          className="comment-list"
+          header={`${dataComment.length} 回复`}
+          itemLayout="horizontal"
+          dataSource={dataComment}
+          renderItem={item => (
+            <li>
+              <Comment
+                author={item.author}
+                content={item.content}
+                datetime={item.datetime}
+              />
+            </li>
+          )}
+      />
+       <Editor
+              onChange={handleChange}
+              onSubmit={handleSubmit}
+              value={currentComment}
+            />
     </Layout>
   )
 }
