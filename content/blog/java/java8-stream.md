@@ -55,10 +55,10 @@ public class StreamTest {
         users.add(new User("zhu", "bajie"));
         users.add(new User("sha", "heshang"));
 
-        //test filter and forEach prtint wukong
+        //测试filter和forEach，打印"wukong"
         users.stream().filter(x->x.getFirstName().equals("sun")).forEach(x->System.out.println(x.getLastName()));
 
-        //test map and collect
+        //测试map和collect, 得到一个新的只包含性的List 
         List<String> firstNames = users.stream().map(User::getFirstName).collect(Collectors.toList());
         firstNames.forEach(x->System.out.println(x));
     }
