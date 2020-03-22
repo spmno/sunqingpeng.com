@@ -37,7 +37,7 @@ tags: ["java", "rxjava", "retrofit", "livedata"]
 ```
 布局比较简单，就用了一个EditText来显示取回来的数据。这里就不贴代码了。  
 1. 创建retrofit Api的interface:
-```
+```Java
 import io.reactivex.Observable;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
@@ -48,7 +48,7 @@ public interface GithubApi {
 ```
 因为API的地址是https://api.github.com/users/{name}，所以这里用了Path。
 如果是参数的话，还可以用Query，比如下面例子：
-```
+```Java
 public interface NewsApi {
     @GET("top-headlines")
     Observable<NewsResponse> getNewsList(@Query("sources") String newsSource, @Query("apiKey") String apiKey);
@@ -57,7 +57,7 @@ public interface NewsApi {
 这种对应的API地址是：http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=7d60a0fa1dec462eb682c0e256f709a8。
 
 2. 创建Retrofit Service:
-```
+```Java
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
@@ -94,7 +94,7 @@ public class RetrofitService {
 ```
 这里加了Okhttp的HttpLoggingInterceptor工具，这个工具可以将Request和Response的Log都打出来，方便调试。
 3. 建立Github的ViewModel，存储LiveData对象：
-```
+```Java
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -130,7 +130,7 @@ public class GithubUserViewModel extends ViewModel {
 ```
 这里用了RxJava和Retrofit结合，将网络操作放到io线程，刷新UI的操作放到了主线程。
 4. MainActivity，创建ViewModel
-```
+```Java
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding activityMainBinding;

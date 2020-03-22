@@ -9,7 +9,7 @@ java8 增加lambda之后，forEach与lambda组合，能让我们写更少的代�
 
 1. ArrayList:  
 
-```
+```Java
 import java.util.ArrayList;
 import java.util.List;  
 public class ForEachTest {
@@ -23,7 +23,7 @@ public class ForEachTest {
 ```
 
 2. Map:  
-```
+```Java
 import java.util.HashMap;  
 import java.util.Map;
 public class ForEachTest {

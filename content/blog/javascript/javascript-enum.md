@@ -9,7 +9,7 @@ tags: ["javascript", "enum"]
 Javascript虽然没有原生的关键字去支持，但也可以用其它方法实现。
 
 声明对象
-```
+```JavaScript
 var CanboxStatus = {
   OPEN: 1,
   CLOSE: 2,
@@ -17,7 +17,7 @@ var CanboxStatus = {
 };
 ```
 然后用对象的值去判断返回结果。
-```
+```JavaScript
 if (boxStatus !== CanboxStatus.OPEN) {
     event.reply("netmanager-reply", "not start");
 }

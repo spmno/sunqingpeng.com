@@ -43,7 +43,7 @@ stream是java8新引入的包，具体可以参考官方文档
 </table>
 
 直接上代码吧：  
-```
+```Java
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;

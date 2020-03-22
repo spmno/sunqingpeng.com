@@ -10,7 +10,7 @@ tags: ["java", "predicate", "java8"]
 
 Predicate单词本意是断言，这里Predicate就是断言条件的真假。主要是test()函数，返回传入函数的真假。
 上代码：
-```
+```Java
 import java.util.function.Predicate;
 
 public class PredicateTest {
