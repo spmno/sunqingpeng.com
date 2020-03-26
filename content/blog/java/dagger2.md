@@ -82,5 +82,17 @@ class MyApp {
     }
 }
 ```
-可以和上面的代码比较一下，只是通过注释来完成setEngine的过程，Dagger还会生成3个辅助类，如下图：
-![生成类](dagger-generated.png)
+可以和上面的代码比较一下，只是通过注释来完成setEngine的过程，Dagger还会生成3个辅助类，如下图：  
+![生成类](dagger-generated.png)  
+ 如果Engine类不可以修改，无法在构造函数在注释。我们就需要Module的概念。@Provides提供需要的对象。
+ ```Java
+@Module
+public class EngineModule {
+    @Provides
+    static Engine provideEngine() {
+        return new Engine();
+    }
+}
+ ```
+ 其它的代码不变，Engine类的@Inject注释就不用了。
+ 
