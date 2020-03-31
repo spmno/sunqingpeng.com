@@ -1,4 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[孙某 Blog]]></title><description><![CDATA[技术文章随笔，前沿技术，Android、Flutter、React、Gatsby、C++、JavaScript、嵌入式、汽车电子]]></description><link>http://www.sunmou.cn</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 31 Mar 2020 09:25:42 GMT</lastBuildDate><item><title><![CDATA[Material Design概述]]></title><description><![CDATA[资料基本上来自于Google的Material Design网站，https://material.io/
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[孙某 Blog]]></title><description><![CDATA[技术文章随笔，前沿技术，Android、Flutter、React、Gatsby、C++、JavaScript、嵌入式、汽车电子]]></description><link>http://www.sunmou.cn</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 31 Mar 2020 09:47:24 GMT</lastBuildDate><item><title><![CDATA[将Blog布置到Github上]]></title><description><![CDATA[Blog之前一直在自己的服务器。一年几百块钱，也是不小的数目。 所以就把Blog搬到了Github的pages上，方法也比较简单。 安装gh-pages工具，在Blog的根目录下执行：  增加部署命令：    部署到Github上：  域名设置： 在阿里云无名那里建立CNAME…]]></description><link>http://www.sunmou.cn/myblog/deploy-blog/</link><guid isPermaLink="false">http://www.sunmou.cn/myblog/deploy-blog/</guid><pubDate>Mon, 30 Mar 2020 18:42:03 GMT</pubDate><content:encoded>&lt;p&gt;Blog之前一直在自己的服务器。一年几百块钱，也是不小的数目。&lt;br&gt;
+所以就把Blog搬到了Github的pages上，方法也比较简单。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;安装gh-pages工具，在Blog的根目录下执行：&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;npm install gh-pages --save&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;增加部署命令：&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;&amp;quot;deploy&amp;quot;: &amp;quot;gatsby build --prefix-paths &amp;amp;&amp;amp; gh-pages -d public&amp;quot;&lt;/code&gt;  &lt;/li&gt;
+&lt;li&gt;部署到Github上：&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;npm run deploy&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;域名设置：&lt;/li&gt;
+&lt;li&gt;在阿里云无名那里建立CNAME类型的解析，并把地址解析指向yourname.github.io。  &lt;/li&gt;
+&lt;li&gt;在Github的代码库的设置里，把Custom Domain设置成你的域名，我这里设置成了www.sunmou.cn。  &lt;/li&gt;
+&lt;li&gt;在根目录里新建一个目录static，创建一个文件CNAME，内容为域名地址，我这里为www.sunmou.cn。  &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;再次部署 &lt;code class=&quot;language-text&quot;&gt;npm run deploy&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;我的Blog代码库&lt;a href=&quot;https://github.com/spmno/sunmou.cn&quot;&gt;https://github.com/spmno/sunmou.cn&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Material Design概述]]></title><description><![CDATA[资料基本上来自于Google的Material Design网站，https://material.io/
 谷歌对设计原则，组件，Icons，辅助设计，开发都做了相关的建议。 设计 Layout: 可预测，可感知，前后设计一致。响应式。  https://material.io…]]></description><link>http://www.sunmou.cn/design/material-design/</link><guid isPermaLink="false">http://www.sunmou.cn/design/material-design/</guid><pubDate>Wed, 25 Mar 2020 10:42:03 GMT</pubDate><content:encoded>&lt;p&gt;资料基本上来自于Google的Material Design网站，&lt;a href=&quot;https://material.io/&quot;&gt;https://material.io/&lt;/a&gt;
 谷歌对设计原则，组件，Icons，辅助设计，开发都做了相关的建议。&lt;/p&gt;
 &lt;ul&gt;
