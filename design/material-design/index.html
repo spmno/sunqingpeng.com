@@ -1,0 +1,332 @@
+<!DOCTYPE html><html lang="zh"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:#007acc;text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}</style><style data-href="/styles.491a16106869c73de5f8.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-191cc9f50f3b76b9617cb383f19acb7d.woff2) format("woff2"),url(/static/montserrat-latin-100-370318464551d5f25b0f0a78f374faac.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-bdeaeb79db315697bd173a55b097dc18.woff2) format("woff2"),url(/static/montserrat-latin-100italic-ecf7d49386e8f265878e735db34a7c4b.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-85d5ef9db7f2dc6979172a4a3b2c57cb.woff2) format("woff2"),url(/static/montserrat-latin-200-1fc98e126a3d152549240e6244d7e669.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-49095760a498d024fe1a85a078850df9.woff2) format("woff2"),url(/static/montserrat-latin-200italic-fe46cf8b9462c820457d3bf537e4057f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-7c3daf12b706645b5d3710f863a4da04.woff2) format("woff2"),url(/static/montserrat-latin-300-8dc95fab9cf98d02ca8d76e97d3dff60.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-f20b178ca2024a5eac8e42e6649db86c.woff2) format("woff2"),url(/static/montserrat-latin-300italic-3fe16939288856e8e828fa2661bf2354.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-bc3aa95dca08f5fee5291e34959c27bc.woff2) format("woff2"),url(/static/montserrat-latin-400-8102c4838f9e3d08dad644290a9cb701.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-5cad650422a7184467af5a4d17b264c4.woff2) format("woff2"),url(/static/montserrat-latin-400italic-d191f22af3bb50902b99ac577f81a322.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-92d16e458625f4d2c8940f6bdca0ff09.woff2) format("woff2"),url(/static/montserrat-latin-500-8b763220218ffc11c57c84ddb80e7b26.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-47bfcca6b69d6a9acca7a8bff17193e2.woff2) format("woff2"),url(/static/montserrat-latin-500italic-72c01f753c3940c0b9cb6bf2389caddf.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-6fb1b5623e528e27c18658fecf5ee0ee.woff2) format("woff2"),url(/static/montserrat-latin-600-7c839d15a6f54e7025ba8c0c4b333e8f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-60789af1c9338ed1a9546722ec54b4f7.woff2) format("woff2"),url(/static/montserrat-latin-600italic-f3d4de8d0afb19e777c79032ce828e3d.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-39d93cf678c740f9f6b2b1cfde34bee3.woff2) format("woff2"),url(/static/montserrat-latin-700-80f10bd382f0df1cd650fec59f3c9394.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-ba136d97b14e82284dd595e257f11c47.woff2) format("woff2"),url(/static/montserrat-latin-700italic-8c98142b425630821139c24bd1698700.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-b7018be9ed6cd94da8b6675b3a468c3b.woff2) format("woff2"),url(/static/montserrat-latin-800-9a9befcf50d64f9d2d19d8b1d1984add.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-540ffdd223d1a9ad3d4e678e1a23372e.woff2) format("woff2"),url(/static/montserrat-latin-800italic-897086f99f4e1f45e6b1e9368527d0bc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-58cd789700850375b834e8b6776002eb.woff2) format("woff2"),url(/static/montserrat-latin-900-26d42c9428780e545a540bbb50c84bce.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-451157bc8861fe54f523b3669a3def71.woff2) format("woff2"),url(/static/montserrat-latin-900italic-a8ec4957e1c24f5793305763ad9845b3.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-b1158cfcd4aacb9d8fb61625e37af46a.woff2) format("woff2"),url(/static/merriweather-latin-300-cc7de05e166e90320d7d896e0f72a19d.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-8fe52a48089d6ebe46db0b8e7cc66263.woff2) format("woff2"),url(/static/merriweather-latin-300italic-e1331f5397c2a673f9d3765138debdb5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-8276fdb72ae8f4714d4e6eba704cc39f.woff2) format("woff2"),url(/static/merriweather-latin-400-69f09800f4f6479d06e44eba837df872.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-3a9be9ea9f7aa4af6de7307df21d9fc0.woff2) format("woff2"),url(/static/merriweather-latin-400italic-d76079ed7541a433a54f79316de086e9.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-fa534be7ffa380e39a7f6e03bf9a5e03.woff2) format("woff2"),url(/static/merriweather-latin-700-ba56ea84b8084b7ff9677f50d3cd81bd.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-1ef5edaaa20ae53ea50399884c5e48c6.woff2) format("woff2"),url(/static/merriweather-latin-700italic-534bc9e7ce93c73d73426e46acd78092.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-7528fb70e8a4a82c7305e72ff43ac25f.woff2) format("woff2"),url(/static/merriweather-latin-900-3799b6e2f5ed3fcccf9d7a708d7419fa.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-e1b4d2aaa78e12ad84aaf8a56321e4c2.woff2) format("woff2"),url(/static/merriweather-latin-900italic-2ae22f731b3424e8dbb4b37f7ca6e708.woff) format("woff")}code[class*=language-],pre[class*=language-]{color:#000;background:none;text-shadow:0 1px #fff;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><meta name="generator" content="Gatsby 2.19.7"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="icon" href="/icons/icon-48x48.png?v=7b63ca0e7117dc88ab266ac4e6f4023d"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=7b63ca0e7117dc88ab266ac4e6f4023d"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=7b63ca0e7117dc88ab266ac4e6f4023d"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=7b63ca0e7117dc88ab266ac4e6f4023d"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=7b63ca0e7117dc88ab266ac4e6f4023d"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=7b63ca0e7117dc88ab266ac4e6f4023d"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=7b63ca0e7117dc88ab266ac4e6f4023d"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=7b63ca0e7117dc88ab266ac4e6f4023d"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=7b63ca0e7117dc88ab266ac4e6f4023d"/><title data-react-helmet="true">Material Design概述 | 孙某 Blog</title><meta data-react-helmet="true" name="description" content="根据谷歌官方资料简单介绍一下对Material Design的理解,Material Design"/><meta data-react-helmet="true" name="keywords" content="前沿技术，Android，Flutter，React，Gatsby，C++，JavaScript，嵌入式，汽车电子"/><meta data-react-helmet="true" name="robots" content="all"/><meta data-react-helmet="true" name="googlebot" content="all"/><meta data-react-helmet="true" name="baiduspider" content="all"/><meta data-react-helmet="true" property="og:title" content="Material Design概述"/><meta data-react-helmet="true" property="og:description" content="根据谷歌官方资料简单介绍一下对Material Design的理解,Material Design"/><meta data-react-helmet="true" property="og:type" content="website"/><script>
+var _hmt = _hmt || [];
+_hmt.push(['_setAccount', 'fba288428f358adcc1cf7c844597109a']);
+</script><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link as="script" rel="preload" href="/webpack-runtime-f41210849f1d00375a1d.js"/><link as="script" rel="preload" href="/styles-dec7525c0c950502a21f.js"/><link as="script" rel="preload" href="/app-d49c70f2baafa2e8ed14.js"/><link as="script" rel="preload" href="/commons-1f37349f61589a7956a4.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-057f099e20aada31f59c.js"/><link as="fetch" rel="preload" href="/page-data/design/material-design/page-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div style="margin-left:auto;margin-right:auto;max-width:42rem;padding:2.625rem 1.3125rem"><header><h1 style="font-family:Montserrat, sans-serif;margin-top:0"><a style="box-shadow:none;text-decoration:none;color:inherit" href="/">孙某 Blog</a></h1></header><main><article><header><h1 style="margin-top:1.75rem;margin-bottom:0">Material Design概述</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem">March 25, 2020</p></header><section><p>资料基本上来自于Google的Material Design网站，<a href="https://material.io/">https://material.io/</a>
+谷歌对设计原则，组件，Icons，辅助设计，开发都做了相关的建议。</p>
+<ul>
+<li>
+<p>设计</p>
+<ul>
+<li>Layout: 可预测，可感知，前后设计一致。响应式。  <a href="https://material.io/design/layout/responsive-layout-grid.html#">https://material.io/design/layout/responsive-layout-grid.html#</a><br>
+大部分组件8dp对齐，Icon 4dp对齐。<br>
+三个概念Column，Gutter，Margin
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAAByElEQVQoz01R21baUBDl/z9JdC1LFyoFQkMw5HZycq65oIiltbYvuzOnID5sZjL7kjAzstai9R5KNrgaj+GchWs9vHeXegZx3dDj5uYaRVWi77ug6XwLZx0s8SNutLeIRYpkOkdZNjCZ+KiiaNDkdUBVSDjCt1mEOskghIZcZ4iKBJo/hLJGnn5qrzG1a7xtLep6hx8p1wGv9KyrHkPuA7h/JU7pPY5bB0Ga40ZhatYhw58DpTe402scEgkpdzikhsQ9DlsDVXXocxfAPc+E6D40R6oz94jaaThjL184zu4hv0SYL7bQDxusViUU1STKUcy3AdyrE3fW2LsE1/kMTWex64dzoAnD+naJxTJDFxXYbBp0ZMipyu9VQH6aBY40aaoxLHNM6gibkna5WP4PFE7ha7PCX9qRtQccaV9l2eJN9Gj1M/rCB3DPM+ZYY8wL3osWUxUjfkwwu3/4FChXeCehsS/4SeayavGblt7SAS6B+zBjjjWGXv6n7DAhr2w//WVBC53ICL8yi0Y9hevmhcOR3m7pSC3NGdzzjDnWsJY97BVWXY7CgbdigX0sgngX17QfhSe6uiCDpqpPPc+YYw1r2cNezuCsf1QS0JASz8CwAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="布局概念"
+        title="布局概念"
+        src="/static/0a6b2c41790cfd8b718af095e4b8fb49/fcda8/layout-responsive-columns-margins-gutters.png"
+        srcset="/static/0a6b2c41790cfd8b718af095e4b8fb49/12f09/layout-responsive-columns-margins-gutters.png 148w,
+/static/0a6b2c41790cfd8b718af095e4b8fb49/e4a3f/layout-responsive-columns-margins-gutters.png 295w,
+/static/0a6b2c41790cfd8b718af095e4b8fb49/fcda8/layout-responsive-columns-margins-gutters.png 590w,
+/static/0a6b2c41790cfd8b718af095e4b8fb49/efc66/layout-responsive-columns-margins-gutters.png 885w,
+/static/0a6b2c41790cfd8b718af095e4b8fb49/c83ae/layout-responsive-columns-margins-gutters.png 1180w,
+/static/0a6b2c41790cfd8b718af095e4b8fb49/891d5/layout-responsive-columns-margins-gutters.png 1520w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+列(Column)：根据百分比定义，而不是固定值。<br>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABRElEQVQoz41R2W7CMBDk/z+nf8ALlXpBA2lC7pC1HQNCSSvKEbVTe93QPpTCw8ij3dnxeD0QQoBBBPo+mUsBMqcMU4i8hIxzyChzGiV5xvb72d5n0BNukuABmeSovTmUMasnIdQsgppGjptaceehDOLTHP1leEppkjWVwnGcoatW6AJClyoHw4+mZnstadb+TnfWcLOQOEwyHj68LHCIhYPh+1Kj8wq0QqP6z5D63Zn9FLMQyc0Q2egJeuRB3/sOhttnL4djiHl6Skjnd0h8qzIf0Nz6aOYlts8p2qmD5W8JYfsQQaclKnHRUBgRYV0QEEpAt0C2xN4818Jy1A0QCKxzYi1/5CXDVV4BfoUPuQGSGruIGJZ/2prvNFcbcsJAujQmVf8pPwkla64wJN6L3c/uMcY2k3if5nidZQzLbc32zu3wC3Gg3mCNE0o5AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="360dp columns"
+        title="360dp columns"
+        src="/static/2d313c101fcf6e3fe1b3b0bbcfc5f030/fcda8/layout-responsive-columns-360.png"
+        srcset="/static/2d313c101fcf6e3fe1b3b0bbcfc5f030/12f09/layout-responsive-columns-360.png 148w,
+/static/2d313c101fcf6e3fe1b3b0bbcfc5f030/e4a3f/layout-responsive-columns-360.png 295w,
+/static/2d313c101fcf6e3fe1b3b0bbcfc5f030/fcda8/layout-responsive-columns-360.png 590w,
+/static/2d313c101fcf6e3fe1b3b0bbcfc5f030/efc66/layout-responsive-columns-360.png 885w,
+/static/2d313c101fcf6e3fe1b3b0bbcfc5f030/c83ae/layout-responsive-columns-360.png 1180w,
+/static/2d313c101fcf6e3fe1b3b0bbcfc5f030/891d5/layout-responsive-columns-360.png 1520w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABkElEQVQoz2VQXXPaMBDk//+oPvShk04mEAY7FvIntj4sO41NgA4GOts72UMgPOzs6vZuddJMaQ2tlAfr7zBRAp1tYOIcZp09+NoYmCmDzzPNBh1MkqMOYtgohWUWE6/kPa6e9FwuQuShGMM5kMO0NdjZFkOwwXnT4CzUFxcO58SOYH3rEZ/C0s8qyuAtr4Fb7XAMCpzKBkNU4VjUGESFIbMYYj2CtZi8qedEvK/focz47Jl/Ox0qkaD88Yzy9xLNUwD3uoZ7WsHNI7jntxGsuUZeQ1y/CjS/VtAyeww0VDQ/57A01M8l/oQptosYfZijW8YerLnGHvf0UYHti0SdblDpayBtpxXaQgGpA+oe57XGPq6ArAH0B45r5cGaa+xxD0wHxBZtXvkMzvoKpCLiGrAdLtLQEAXkLYV0OErlwZpr7HEPbA8ktV/mIbChwIvQuKh3/+GfssQ/uv1StvgrSg/WXGOPe7iXZ5r7DZV/v6N/OCxT7BOFHXH3luEQ5DjICttV6sGaa+ztpl6ecTd/+B8sc95g9x/QmwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="600dp columns"
+        title="600dp columns"
+        src="/static/88db37f750afdd04be648a1b8ea1302b/fcda8/layout-responsive-columns-600.png"
+        srcset="/static/88db37f750afdd04be648a1b8ea1302b/12f09/layout-responsive-columns-600.png 148w,
+/static/88db37f750afdd04be648a1b8ea1302b/e4a3f/layout-responsive-columns-600.png 295w,
+/static/88db37f750afdd04be648a1b8ea1302b/fcda8/layout-responsive-columns-600.png 590w,
+/static/88db37f750afdd04be648a1b8ea1302b/efc66/layout-responsive-columns-600.png 885w,
+/static/88db37f750afdd04be648a1b8ea1302b/c83ae/layout-responsive-columns-600.png 1180w,
+/static/88db37f750afdd04be648a1b8ea1302b/891d5/layout-responsive-columns-600.png 1520w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+沟(Gutter)：两个列之间的空间，根据不同的宽度确定不同的固定值。360dp为16dp， 600dp为24dp。
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABC0lEQVQoz61Qa0/DMAzc//9PfOfrgGlU6rpAm7SjLX3T19bDF9jUCahAItLJF9s5X7zSWuOMIAgukTC8f8Y518Zc9c+x+lZMYmg0HgMDX7injQW5Q+662Ct1NfyL4Fz4Nctw6js47Yh6GBD1o0U9jDbHWpbnyw7ngkma4th1cOVx2XYwbx8gd5oOkwyhoO/7y18+T9x5Hrb3d7hxdlDyxY0OLZTUboMIB4nPIjZf0+IOufRCXK7THGlZYZ8VFuQPeYW2KhFG0cXhoiCb4iQBz9MJGCUeZH8EuTraku35teBLHNtH3jChn4Cw7S3ImeNhz58d0s2/OOR++qbGpmiQ1Q1UXlqQM8faTzt8B96t6Y2kkvS3AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="360dp gutters"
+        title="360dp gutters"
+        src="/static/38789a46108e488173b14d497f3c0cc2/fcda8/ayout-responsive-gutters-360.png"
+        srcset="/static/38789a46108e488173b14d497f3c0cc2/12f09/ayout-responsive-gutters-360.png 148w,
+/static/38789a46108e488173b14d497f3c0cc2/e4a3f/ayout-responsive-gutters-360.png 295w,
+/static/38789a46108e488173b14d497f3c0cc2/fcda8/ayout-responsive-gutters-360.png 590w,
+/static/38789a46108e488173b14d497f3c0cc2/efc66/ayout-responsive-gutters-360.png 885w,
+/static/38789a46108e488173b14d497f3c0cc2/c83ae/ayout-responsive-gutters-360.png 1180w,
+/static/38789a46108e488173b14d497f3c0cc2/891d5/ayout-responsive-gutters-360.png 1520w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABhElEQVQoz3VR2U7CUBTk///IJ580QRMIgjQUaYHe29K9tHQDdTxTigGMD5OzzJJ72oFSClprdFXgXVX3H9xoxKtdt5uZMbiEuVphK8RMubC0C0OwEiwEyx6LfkfOEt+79rC0bVirFRSDBQOGcSiLHHHdYFSd4LcnzOoTdHOCKXXdnGH2O3LUUJs0bedVlxdeTs6zDFFZYVId4VUNZmULJXVRNrB7sFc9t5M6PjRIJbA6FLjk/J6sNhtMPyw82AqG6+FJ+5jKSUO9w7gHe+7IGVIfpa5E6/avuwnk0lhvz6IowUuQYBmnmMQZZmHSgT135Kh5jvbQSYrA8+BcBzqOgySKUAOYfwJ+c8QkrxB+AWuZLTmVYM8dOWrej8BB5jgMu4y7wBBlHxjIB38rakTfwEYMdtV2YM8dOWqorcRD75/AKPCR1C3G5RG6KDFKC2iZTflJ5v5whvTcdZxoqKWH3rtAhWC3g7fPMRSxnWR4DVNYWY6pzHP5dgR77shRQy099DKDWT/+IeiC8YHuYgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="600dp gutters"
+        title="600dp gutters"
+        src="/static/a990f24e67545102198995b76e851032/fcda8/layout-responsive-gutters-600.png"
+        srcset="/static/a990f24e67545102198995b76e851032/12f09/layout-responsive-gutters-600.png 148w,
+/static/a990f24e67545102198995b76e851032/e4a3f/layout-responsive-gutters-600.png 295w,
+/static/a990f24e67545102198995b76e851032/fcda8/layout-responsive-gutters-600.png 590w,
+/static/a990f24e67545102198995b76e851032/efc66/layout-responsive-gutters-600.png 885w,
+/static/a990f24e67545102198995b76e851032/c83ae/layout-responsive-gutters-600.png 1180w,
+/static/a990f24e67545102198995b76e851032/891d5/layout-responsive-gutters-600.png 1520w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+边距(Margin)：内容与左右边距的空间。和Gutter一样，根据不同的宽度确定不同的固定值。
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABDElEQVQoz52QfU+DMBDG9/0/lv+YGJPhZsyYyKBvmsAAKVrAjMdeCVlRFhcveXKFe+7X662klJgkhHBZifF8SUopvEoFST4p4DNWP2Hc5p04QCo5M/qKogiPyX6EiXPvHGiLyuZUMKzzGKY1+Op79AsybYuHIkHCmevxp5wB5QTMXvBpgdTc2uZf6jtsi/QPoBjHZ5LjJg6w2W4QhuHikwlwy5/c5f66FndIpju1Q3bMURYFtNYoy9Kp1jXqusa7zfdv+/OEl4BUTFiKID/Aj+mpfgR2zwlPrwBa0zqLccKA4TS4ZmOMEwX9oxp5rgbS7X50Xef0zwmZ3c8z9EeDphlVVZXT9E018izt8BvD5OmczkEQbAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="360dp margin"
+        title="360dp margin"
+        src="/static/ce84c847dcdcd08d7c1d42153b52a6c0/fcda8/ayout-responsive-margins-360.png"
+        srcset="/static/ce84c847dcdcd08d7c1d42153b52a6c0/12f09/ayout-responsive-margins-360.png 148w,
+/static/ce84c847dcdcd08d7c1d42153b52a6c0/e4a3f/ayout-responsive-margins-360.png 295w,
+/static/ce84c847dcdcd08d7c1d42153b52a6c0/fcda8/ayout-responsive-margins-360.png 590w,
+/static/ce84c847dcdcd08d7c1d42153b52a6c0/efc66/ayout-responsive-margins-360.png 885w,
+/static/ce84c847dcdcd08d7c1d42153b52a6c0/c83ae/ayout-responsive-margins-360.png 1180w,
+/static/ce84c847dcdcd08d7c1d42153b52a6c0/891d5/ayout-responsive-margins-360.png 1520w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></li>
+<li>Navigation: 分为侧向导航，前向导航，返回导航。
+横向导航(Lateral navigation)：侧边栏，底部导航，Tab导航。
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/26ff6c4854e73c1ffce3e54697d1ab70/891d5/lateral-nav-drawer.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 66.71052631578947%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAABb0lEQVQ4y6WTy0rDQBiFfQ6fyJ3P4N6HcCkouBHEBl26ENGNeEnFveu6aZFKksnFXMwkTTNpbXKcSxOqQhvpwOFPFvPN+W8btm1DiBDyI8aUwrIsWKbZyDRMuC7B480LLk6e/9wR2lgECjmOg0F/gNurS4yzDIwxqYIVyMc5gAp7O9fY2jyUDzrOCqDneej1XnF+dCAvL55q/qvt32N3+5gDyXKgiOLVIAjguB4Mw8Bw+C4dilOWpYzdJx3a2enqlGtgGPn4pBzqcce+A1aMlUMooK7r6HQ0fsdaDSS2Cc9MQC2AxVwUGPOYRSVG4QzTEfBwJ4AdmfJyIOHfjgWzH4H0vuC+MQTGhIMqpH6J5GOGgiqgprUB1jUMfcwqDsqSJl3VINWVblc5bF3DKIzkiLCcYTqZzjtcNU1RNWwJrEeH0gRxHDcdFsCqrP4PrMdGgPI8R1EUCraOQ7EtlK9emqYyrpWyyXc2SZJfG9Le4TffTbkmT2zFVAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="drawer"
+        title="drawer"
+        src="/static/26ff6c4854e73c1ffce3e54697d1ab70/fcda8/lateral-nav-drawer.png"
+        srcset="/static/26ff6c4854e73c1ffce3e54697d1ab70/12f09/lateral-nav-drawer.png 148w,
+/static/26ff6c4854e73c1ffce3e54697d1ab70/e4a3f/lateral-nav-drawer.png 295w,
+/static/26ff6c4854e73c1ffce3e54697d1ab70/fcda8/lateral-nav-drawer.png 590w,
+/static/26ff6c4854e73c1ffce3e54697d1ab70/efc66/lateral-nav-drawer.png 885w,
+/static/26ff6c4854e73c1ffce3e54697d1ab70/c83ae/lateral-nav-drawer.png 1180w,
+/static/26ff6c4854e73c1ffce3e54697d1ab70/891d5/lateral-nav-drawer.png 1520w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/ce28450fdb582c6a8013f2bf6264d962/891d5/lateral-bottom-nav.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAAA4UlEQVQoz+2QXWoCQRCE5yGPeqN4Fs1CHvQGYoIQcwgPEH/wAt7H7tkoyf4EdwyB3Smnd1DWhVUPkIKiofrrYhiltUbVRARjDETWWtR1yoQRtn6v/gtLKMt8YVFY2JolEwlzd+Hvn8EtCXO9kP1kJnzxHmlokX7mZyehd7rNy50wwlZvLwqZ2Vkj3DImjzs8qQQ9FWHQThCoGM8PMfqtBF2XBSrFe2dXsnIjt42FOmSspxt8DAmzEWH1Rli8EuYvhOXYZzO3E0bYxkJvD3z/MOKDd5S5aSo++ClM+QDNF394BB4j32kq+djYAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="bottom"
+        title="bottom"
+        src="/static/ce28450fdb582c6a8013f2bf6264d962/fcda8/lateral-bottom-nav.png"
+        srcset="/static/ce28450fdb582c6a8013f2bf6264d962/12f09/lateral-bottom-nav.png 148w,
+/static/ce28450fdb582c6a8013f2bf6264d962/e4a3f/lateral-bottom-nav.png 295w,
+/static/ce28450fdb582c6a8013f2bf6264d962/fcda8/lateral-bottom-nav.png 590w,
+/static/ce28450fdb582c6a8013f2bf6264d962/efc66/lateral-bottom-nav.png 885w,
+/static/ce28450fdb582c6a8013f2bf6264d962/c83ae/lateral-bottom-nav.png 1180w,
+/static/ce28450fdb582c6a8013f2bf6264d962/891d5/lateral-bottom-nav.png 1520w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/8c4b0bdfc1a24b444b7a772d591515f1/891d5/lateral-tabs.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 47.368421052631575%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsSAAALEgHS3X78AAAB1ElEQVQoz4WPX0hTYRiHDxHUZdCFVOxmgRaBSIWkRHjhbaklrBJZRVaCBonRH2iWtPSm2SpC2sJM5hajwqJNKkK6iP4no5vKKPadc+ZZ85wzuurq6fOzYJCriwfe7/3e9+H3aoZhMI+u6xJZmzr3I1+4cfozN/tmFKPnFlD12Rli/d9Ij3yVezqGvrD7x6OVCg0lFAS2Clq0HP5lOXyayc7f7JG9vZJdmsWZOoGZE/8WqoRy6ELDLH7NoWuFw8ElNgc0m/3y3bHU4fByR/65BLdZSqj/N6Ecuro7T3/NT/pqivR6fnDCW+Sk16anosApb4Hja2xCTaaaLZtwHiEEees7z188IxDsJhGPcPFygNGxYa4n3nA++ppQ7ANDY9O8zQisXEmQxYTZbBbHLjLxcJyOzkZSE+PcS0aJ3QoTiD6iqTtMTzDCYHKa95+kcNZElKRbNGGhMMfU0yeMXAvxOJVmajLNx0yG4SuDNDfW0+tvITgwwMtX78jnLbVTXigTztk2k6kH+Fp30Nq8nX3tbYQvDXHs6CGqN1TSUL+Z2o3ruHsnieM46qqyQnWy48oz42yqrsLjWU3dllq6Oo/Q3uZjVcVK1ld5qVzr4XYijuu6fwl/ATPyMdE3IBcvAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="tab"
+        title="tab"
+        src="/static/8c4b0bdfc1a24b444b7a772d591515f1/fcda8/lateral-tabs.png"
+        srcset="/static/8c4b0bdfc1a24b444b7a772d591515f1/12f09/lateral-tabs.png 148w,
+/static/8c4b0bdfc1a24b444b7a772d591515f1/e4a3f/lateral-tabs.png 295w,
+/static/8c4b0bdfc1a24b444b7a772d591515f1/fcda8/lateral-tabs.png 590w,
+/static/8c4b0bdfc1a24b444b7a772d591515f1/efc66/lateral-tabs.png 885w,
+/static/8c4b0bdfc1a24b444b7a772d591515f1/c83ae/lateral-tabs.png 1180w,
+/static/8c4b0bdfc1a24b444b7a772d591515f1/891d5/lateral-tabs.png 1520w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span>
+前向导航(Forward navigation)：向下引入内容，一系列的流，引入到其它APP。<br>
+实现方式：卡片，列表等容器，按钮中转，搜索，内容链接。<br>
+返回导航(Reverse navigation)：返回键。
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/fb83775bd4a8f47a59b971b26198b034/891d5/reverse-chronological.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAACqElEQVQoz12SS0hUcRTG7yLKwChbBBEGQdCmIlq0SCFaFbqoVKiwspdoj0VZYuYtw6RyUWiQ4qOskV6Kb5oUpxxU1MxHxgzece7MOHcehq/ReZlT+OvOLKT6w8f/cBbnO+f7PkGv19PV3cvHzmGaP3XR0dBIrbaX6pdNXD5/CjEzlZT4/TS3tjA+amCuz4Br0o3b5cbldOJyuf6BIMsyLU0N3LmVRf2rAl48EqmrqaP2+WOupqWQlJRE4Y1LjH4bwiKZsQ8bsNisyGYziqKg2BXsdvsKBI9nDl1nD0XFFbQ0vqW0MIMnD66gKb5NWclTLpxMJjEhgYmJCZzqRvKELVJbLBampqYiPYfDEUGYQPgxOcnAiIHK2nZKXjRQWllOZXU5ZVU1vKtvI+V4KvEHDzFulpmZmSG0tITf74+ct7y8zP9PmJ+fR6OpITp6IzEbYzl3OYvr6deI3bAFIWoda6Jj2LptO5IkMT09jc/nx+v1MTs7RyAQJBAMEgwu8isU4vevUHigB03Na9ZGbyJ2605On83gYXoiiTs2cS/lAK73OQw9y8RuVTVzujDLVkzjskowztiYpMKE2WJjTiULeGYRvAsLlJVXsD5mM/v2xpF64gipmbs5dngXaXF7qLp5huSD8ZhMJuyqRn1fvvKps5uuHjUZOj2NrW20tH/GIlv46fUgBNWVc3NzEQQhgtVRq1bqvxE+WVHsDA70qY5/Q9tYp6aiAp1Oh76rB2mkH4ehHyEstFarJTs7m/w8kcJrOeSJIqKYx738fO7eEblfUIDNZlOdVJDGjDicCm+fV1J05SKyyYhNjYvU94GOChEhbHd4aHBxkcC8l9B3GwF/QBU8EHEz/Pt8PtxuN1arleHBAYxjBrSaNxQfPYdxdBijZMLQ3YRV/4o/IkxeaNm55tgAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="reverse"
+        title="reverse"
+        src="/static/fb83775bd4a8f47a59b971b26198b034/fcda8/reverse-chronological.png"
+        srcset="/static/fb83775bd4a8f47a59b971b26198b034/12f09/reverse-chronological.png 148w,
+/static/fb83775bd4a8f47a59b971b26198b034/e4a3f/reverse-chronological.png 295w,
+/static/fb83775bd4a8f47a59b971b26198b034/fcda8/reverse-chronological.png 590w,
+/static/fb83775bd4a8f47a59b971b26198b034/efc66/reverse-chronological.png 885w,
+/static/fb83775bd4a8f47a59b971b26198b034/c83ae/reverse-chronological.png 1180w,
+/static/fb83775bd4a8f47a59b971b26198b034/891d5/reverse-chronological.png 1520w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></li>
+<li>Color: 主颜色，次要颜色，亮暗主题。
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 90.39473684210526%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAAAsSAAALEgHS3X78AAAEIUlEQVQ4y1WUS0xUVxzGzwwIpgPYxG5KVyya1E0XLUoxbTR1AYvGppu2dNe01XRlMFpprA0wDSg+ktKksaZx0Yfl0QYRhIoKg1QcXr6wOMNDkLkzd+487wwMUBj49ZwrRrzJl//JuTm/8z/f/c4VmuZHNzRCMam4RtiSn0hMJxLXiZpSssYD6/IHnigYJB4KETcMTCkjEEDTNISCjQ0F+KdZp69J58YfQXoafFxp9vB3k4eOCw/pkOPGCS8Nkw9pnJmgcXaKhru3aXC7aRwa4rfBQYbGxy2oiKU0/qwO8sUmk32bo3wqTD4U07yX38W7L3bypmjlDUc7GTe6EO42xINexOQtRP0pxIED2JzViKpKqq9eJRUOPwOWiRifZUT53GbykQTudnTwdvZlisQlCnPaybpzE/u0mwzPTTLG+7Gdrcd27BiZJ45bQOe1a88DP1ZAe8QClmVMW51tl7C3pHbktbP5vptNMwNkTbrJksDM82fJqK0l+2QdQnb53fV1YCSp0XrS4KsCky8dcfbZE3wgZvjk9W5253byjq2dbZmXEed/QriaEbfaERP9iOpvEPv3I76uQBw5wrGuLhYiEUQwpHHHFaD9e522MzqXThk0187S+OMov565xy91d/n59D1O3hnmuPcuJyYeUBeYoq6/jzrpW52rB6fU9bExwrqO0HwaRtiPuWCQWDSIpwJyLOORNEimQswvRpiTVR1nwQgzr8nI3B/D9E5iTjySmiIxPokx8xjN70f4fD6ikRh+n07AH2R5KU16ZY3VNJjxJHrAYHk5zX8rK6wBwb5B2l7eTotjGy0vvGbVZpHPSM0PBOeTiIDMzuzsLC6Xi7U1tQTi8Tjz8/OMjo7i8XisueWlJUKJOL4rLrp3vM9f4hUJ2kpr9qtctBUw/O1pgqk5hF+2GVhPeSwWIyKNDcpbYMj0q3e69CUajZJMJqUNCSIzszxq6WTywkUmfm9hqqmNqYZLPB68jd8ISg8lSAEV5ClAjZ8qJK+Xmu/u7rbU09uLy91P76Cb3qEBegfcdPff5F+vR9qjP/FQdaYWq7rx2WhBQUEB+fn5vLR1KzYhsK8rKzMTIauz2kkqlXrmYV9fH+l0mhVl/jpodXXVsmBc3tPS0lLy8vKsxTabDbvdbo23bNlCTk4OTqfT8l0kEgnOnTvHzp07KSsro6SkhKKiIoqLi9m1axd79+5lz5495ObmWoDCwkLrA6rjD8qfwvDwMCMjI3i9Xss6oahVVVU4HA5rwUapnbOzs5+bUxupr7/xUUdVHHVSEZaB7ZLXRrV88OBBDh06xNGjR6moqKCmpobKykrKy8s5fPiwpfr6eqsb5bdpmpYlKhFK1v9QfRQFVTssyawtLi6ysLBgaW5uztp947yKj0qCWqc6UlWBlFQa/gewDD1ILtjgugAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="color"
+        title="color"
+        src="/static/dbc1475057fc1aab85061ceef7e1b907/fcda8/color-colorsystem-schemecreation-theme.png"
+        srcset="/static/dbc1475057fc1aab85061ceef7e1b907/12f09/color-colorsystem-schemecreation-theme.png 148w,
+/static/dbc1475057fc1aab85061ceef7e1b907/e4a3f/color-colorsystem-schemecreation-theme.png 295w,
+/static/dbc1475057fc1aab85061ceef7e1b907/fcda8/color-colorsystem-schemecreation-theme.png 590w,
+/static/dbc1475057fc1aab85061ceef7e1b907/efc66/color-colorsystem-schemecreation-theme.png 885w,
+/static/dbc1475057fc1aab85061ceef7e1b907/c83ae/color-colorsystem-schemecreation-theme.png 1180w,
+/static/dbc1475057fc1aab85061ceef7e1b907/891d5/color-colorsystem-schemecreation-theme.png 1520w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+工具：<a href="https://www.materialpalette.com/">https://www.materialpalette.com/</a></li>
+</ul>
+</li>
+</ul></section><hr style="margin-bottom:1.75rem"/><footer><div style="display:flex;margin-bottom:3.5rem"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:50px;height:50px;margin-right:0.875rem;margin-bottom:0;min-width:50px;border-radius:100%"><img aria-hidden="true" src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAIDBAUG/8QAFwEBAQEBAAAAAAAAAAAAAAAAAgQBA//aAAwDAQACEAMQAAABRnVi2gR5oc78wOL/xAAcEAACAgIDAAAAAAAAAAAAAAABAgADERIEECH/2gAIAQEAAQUCsLYq3MwBOQyqKLF2Hnddrhf/xAAaEQACAgMAAAAAAAAAAAAAAAAAEQIQEiEx/9oACAEDAQE/AcdOkS6f/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAHRAAAgIBBQAAAAAAAAAAAAAAAAEREiEgIkFRYf/aAAgBAQAGPwJVhes3NNdoyyvJDw9ESf/EABsQAAMAAwEBAAAAAAAAAAAAAAABESExQVGR/9oACAEBAAE/IVKfTgM9L5YEtIMVtt4TsxpnGU2JE2rPT//aAAwDAQACAAMAAAAQOwcB/8QAFhEBAQEAAAAAAAAAAAAAAAAAAREA/9oACAEDAQE/EBamBJMY9//EABkRAAIDAQAAAAAAAAAAAAAAAABBARARMf/aAAgBAgEBPxB5TI4f/8QAHBABAQEBAAMBAQAAAAAAAAAAAREAITFRcUFh/9oACAEBAAE/EHahaOfB+uiUFoVHgcXH6JZq5G6iw/uU5XZgX04QoNbXSqqr5V64BfjpoA4izhv/2Q==" alt="孙庆鹏" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms;border-radius:50%"/><noscript><picture><source srcset="/static/b02bc2e9486ec5243bce1f42d1214d8d/99438/webwxgeticon.jpg 1x,
+/static/b02bc2e9486ec5243bce1f42d1214d8d/aba1d/webwxgeticon.jpg 1.5x,
+/static/b02bc2e9486ec5243bce1f42d1214d8d/b315d/webwxgeticon.jpg 2x" /><img loading="lazy" width="50" height="50" srcset="/static/b02bc2e9486ec5243bce1f42d1214d8d/99438/webwxgeticon.jpg 1x,
+/static/b02bc2e9486ec5243bce1f42d1214d8d/aba1d/webwxgeticon.jpg 1.5x,
+/static/b02bc2e9486ec5243bce1f42d1214d8d/b315d/webwxgeticon.jpg 2x" src="/static/b02bc2e9486ec5243bce1f42d1214d8d/99438/webwxgeticon.jpg" alt="孙庆鹏" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><p>作者 <strong>孙庆鹏</strong> ，是一位JS爱好者，嵌入式程序员。<br/>微信：<!-- -->zhongyichengxuyuan</p></div></footer></article><nav><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/java/dagger2/">← <!-- -->dagger2的使用</a></li><li></li></ul></nav></main><footer>© <!-- -->2020<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.org">Gatsby</a>    <a href="http://beian.miit.gov.cn/" target="_blank"> 辽ICP备18002903号-5</a></footer></div></div></div><script>
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?fba288428f358adcc1cf7c844597109a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/design/material-design/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-d49c70f2baafa2e8ed14.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-057f099e20aada31f59c.js"],"component---src-templates-blog-list-js":["/component---src-templates-blog-list-js-aea1a699687963707d5f.js"],"component---src-templates-tags-js":["/component---src-templates-tags-js-54ac28ba930c42898b0d.js"],"component---src-pages-404-js":["/component---src-pages-404-js-5a8937142c8389cd9d6c.js"]};/*]]>*/</script><script src="/component---src-templates-blog-post-js-057f099e20aada31f59c.js" async=""></script><script src="/commons-1f37349f61589a7956a4.js" async=""></script><script src="/app-d49c70f2baafa2e8ed14.js" async=""></script><script src="/styles-dec7525c0c950502a21f.js" async=""></script><script src="/webpack-runtime-f41210849f1d00375a1d.js" async=""></script></body></html>

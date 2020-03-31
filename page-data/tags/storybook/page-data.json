@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/storybook/","result":{"data":{"site":{"id":"Site","siteMetadata":{"title":"孙某 Blog"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"id":"2c96b82a-fffe-5737-b473-bb3cc59b770e","fields":{"slug":"/react/storybook/"},"frontmatter":{"title":"使用storybook测试自己组件"}}}]}},"pageContext":{"tag":"storybook"}}}

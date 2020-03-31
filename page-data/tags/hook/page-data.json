@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/hook/","result":{"data":{"site":{"id":"Site","siteMetadata":{"title":"孙某 Blog"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"id":"006c3f61-cb08-55ae-9a66-2db28e99f8c8","fields":{"slug":"/react/hook/"},"frontmatter":{"title":"react hook特性"}}}]}},"pageContext":{"tag":"hook"}}}

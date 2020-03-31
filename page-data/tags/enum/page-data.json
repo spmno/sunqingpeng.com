@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/enum/","result":{"data":{"site":{"id":"Site","siteMetadata":{"title":"孙某 Blog"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"id":"4f2a0791-051c-5056-8098-a68fbbb78e22","fields":{"slug":"/javascript/javascript-enum/"},"frontmatter":{"title":"javascrip中的枚举类型"}}}]}},"pageContext":{"tag":"enum"}}}

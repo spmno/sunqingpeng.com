@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/json/","result":{"data":{"site":{"id":"Site","siteMetadata":{"title":"孙某 Blog"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"id":"8b89dc8e-0bd8-53aa-9721-d9f2186cbdd9","fields":{"slug":"/web/nimn/"},"frontmatter":{"title":"最省空间的数据格式，nimn介绍"}}}]}},"pageContext":{"tag":"json"}}}

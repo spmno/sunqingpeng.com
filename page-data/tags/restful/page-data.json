@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/restful/","result":{"data":{"site":{"id":"Site","siteMetadata":{"title":"孙某 Blog"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"id":"bc68e232-3c1e-5e74-a35b-1ed80b72474b","fields":{"slug":"/myblog/strapi-api/"},"frontmatter":{"title":"strapi提供api服务"}}}]}},"pageContext":{"tag":"restful"}}}

@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/headless-cms/","result":{"data":{"site":{"id":"Site","siteMetadata":{"title":"孙某 Blog"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"id":"574e01b4-5465-51c0-ae8d-3d5c3bcfe7d9","fields":{"slug":"/myblog/strapi/"},"frontmatter":{"title":"用strapi搭建一个内容管理系统"}}}]}},"pageContext":{"tag":"headless cms"}}}

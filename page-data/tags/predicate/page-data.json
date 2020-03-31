@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/predicate/","result":{"data":{"site":{"id":"Site","siteMetadata":{"title":"孙某 Blog"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"id":"9d53cc49-2f96-585a-a12d-6c6c5ed30fe3","fields":{"slug":"/java/java8-predicate/"},"frontmatter":{"title":"java8 Predicate"}}}]}},"pageContext":{"tag":"predicate"}}}

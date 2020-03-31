@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/ubuntu/","result":{"data":{"site":{"id":"Site","siteMetadata":{"title":"孙某 Blog"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"id":"bf278922-a866-54eb-8ec2-acf30bc9a633","fields":{"slug":"/nodejs/file-limited-error/"},"frontmatter":{"title":"Ubuntu文件监控数量限制"}}}]}},"pageContext":{"tag":"ubuntu"}}}

@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/room/","result":{"data":{"site":{"id":"Site","siteMetadata":{"title":"孙某 Blog"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"id":"979b940b-b986-597d-b4c6-bb532f581fca","fields":{"slug":"/android/room/"},"frontmatter":{"title":"Android组件Room"}}}]}},"pageContext":{"tag":"room"}}}

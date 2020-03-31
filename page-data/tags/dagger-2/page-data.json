@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/dagger-2/","result":{"data":{"site":{"id":"Site","siteMetadata":{"title":"孙某 Blog"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"id":"2f4c49a1-1706-58dc-a502-02b364bf8c96","fields":{"slug":"/java/dagger2/"},"frontmatter":{"title":"dagger2的使用"}}}]}},"pageContext":{"tag":"dagger2"}}}
