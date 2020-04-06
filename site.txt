@@ -1,3 +1,4 @@
+http://www.sunmou.cn/nodejs/commonjs-exports/
 http://www.sunmou.cn/myblog/deploy-blog/
 http://www.sunmou.cn/design/material-design/
 http://www.sunmou.cn/java/dagger2/
@@ -42,6 +43,7 @@ http://www.sunmou.cn/tags/live-data/
 http://www.sunmou.cn/tags/material-design/
 http://www.sunmou.cn/tags/view-model/
 http://www.sunmou.cn/tags/blog/
+http://www.sunmou.cn/tags/commonjs/
 http://www.sunmou.cn/tags/cpp/
 http://www.sunmou.cn/tags/dagger-2/
 http://www.sunmou.cn/tags/data-format/

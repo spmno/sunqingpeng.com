@@ -1,4 +1,53 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[孙某 Blog]]></title><description><![CDATA[技术文章随笔，前沿技术，Android、Flutter、React、Gatsby、C++、JavaScript、嵌入式、汽车电子]]></description><link>http://www.sunmou.cn</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 04 Apr 2020 01:27:18 GMT</lastBuildDate><item><title><![CDATA[CommonJs模块规范中module.exports和exports]]></title><description><![CDATA[之前用React基本上都是用export/import来导入，导出模块。但Nodejs不支持，需要用CommonJs的module。 每一个node.js执行文件，都自动创建一个module对象，同时，module对象会创建一个叫exports…]]></description><link>http://www.sunmou.cn/nodejs/commonjs-exports/</link><guid isPermaLink="false">http://www.sunmou.cn/nodejs/commonjs-exports/</guid><pubDate>Sat, 04 Apr 2020 09:17:03 GMT</pubDate><content:encoded>&lt;p&gt;之前用React基本上都是用export/import来导入，导出模块。但Nodejs不支持，需要用CommonJs的module。&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[孙某 Blog]]></title><description><![CDATA[技术文章随笔，前沿技术，Android、Flutter、React、Gatsby、C++、JavaScript、嵌入式、汽车电子]]></description><link>http://www.sunmou.cn</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 06 Apr 2020 07:43:17 GMT</lastBuildDate><item><title><![CDATA[ubuntu mysql安装及简单使用]]></title><description><![CDATA[用apt安装所需要的库： 初始化配置：  新建数据库： 常用操作： 创建数据库 create database dbname charset=utf8; 删除数据库 drop database dbname; 切换数据库 use dbname; 查看当前选择的数据库 select…]]></description><link>http://www.sunmou.cn/database/mysql-ubuntu/</link><guid isPermaLink="false">http://www.sunmou.cn/database/mysql-ubuntu/</guid><pubDate>Mon, 06 Apr 2020 10:46:15 GMT</pubDate><content:encoded>&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;用apt安装所需要的库：&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;sudo apt install mysql-server          //服务端
+sudo apt install mysql-client          //客户端
+sudo apt install libmysqlclient-dev    //程序编译时链接的库&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;初始化配置：&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;sudo mysql_secure_installation&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;新建数据库：&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;CREATE DATABASE databasename
+GRANT ALL PRIVILEGES ON databasename.* TO databasename@&amp;quot;%&amp;quot; IDENTIFIED BY &amp;quot;password&amp;quot;;  //针对这个数据库，新建一个用户和密码 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;常用操作：&lt;br&gt;
+&lt;font color=&apos;blue&apos;&gt;创建数据库&lt;/font&gt;&lt;br&gt;
+create database dbname charset=utf8;&lt;br&gt;
+&lt;font color=&apos;blue&apos;&gt;删除数据库&lt;/font&gt;&lt;br&gt;
+drop database dbname;&lt;br&gt;
+&lt;font color=&apos;blue&apos;&gt;切换数据库&lt;/font&gt;&lt;br&gt;
+use dbname;&lt;br&gt;
+&lt;font color=&apos;blue&apos;&gt;查看当前选择的数据库&lt;/font&gt;&lt;br&gt;
+select database();&lt;br&gt;
+&lt;font color=&apos;blue&apos;&gt;查看当前数据库所有表&lt;/font&gt;&lt;br&gt;
+show tables;&lt;br&gt;
+&lt;font color=&apos;blue&apos;&gt;创建表&lt;/font&gt;&lt;br&gt;
+create table tablename(
+列及类型
+);&lt;br&gt;
+&lt;font color=&apos;blue&apos;&gt;修改表&lt;/font&gt;&lt;br&gt;
+alter table tablename add|change|drop 列名　类型；&lt;br&gt;
+&lt;font color=&apos;blue&apos;&gt;删除表&lt;/font&gt;&lt;br&gt;
+drop table tablename;&lt;br&gt;
+&lt;font color=&apos;blue&apos;&gt;查看表结构&lt;/font&gt;&lt;br&gt;
+desc tablename;&lt;br&gt;
+&lt;font color=&apos;blue&apos;&gt;查看表的创建语句&lt;/font&gt;&lt;br&gt;
+show create table ‘tablename’&lt;br&gt;
+&lt;font color=&apos;blue&apos;&gt;查询&lt;/font&gt;&lt;br&gt;
+select * from tablename;&lt;br&gt;
+&lt;font color=&apos;blue&apos;&gt;增加&lt;/font&gt;&lt;br&gt;
+全列插入: insert into tablename values(…)&lt;br&gt;
+缺省插入: insert into tablename(列１…) values(值1 …)&lt;br&gt;
+同时插入多条数据　insert into tablename values(…),(…)&lt;br&gt;
+或者　insert into tablename(列１…) values(值１…),(值１…);&lt;br&gt;
+&lt;font color=&apos;blue&apos;&gt;修改&lt;/font&gt;&lt;br&gt;
+update tablename set 列1=值1 ,… where 条件&lt;br&gt;
+&lt;font color=&apos;blue&apos;&gt;删除&lt;/font&gt;&lt;br&gt;
+delete from tablename where 条件&lt;br&gt;
+注意删除需谨慎，删了就没了一般进行逻辑删除，即把isdelete 设成１如（上下图对比）实现假删除&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[CommonJs模块规范中module.exports和exports]]></title><description><![CDATA[之前用React基本上都是用export/import来导入，导出模块。但Nodejs不支持，需要用CommonJs的module。 每一个node.js执行文件，都自动创建一个module对象，同时，module对象会创建一个叫exports…]]></description><link>http://www.sunmou.cn/nodejs/commonjs-exports/</link><guid isPermaLink="false">http://www.sunmou.cn/nodejs/commonjs-exports/</guid><pubDate>Sat, 04 Apr 2020 09:17:03 GMT</pubDate><content:encoded>&lt;p&gt;之前用React基本上都是用export/import来导入，导出模块。但Nodejs不支持，需要用CommonJs的module。&lt;/p&gt;
 &lt;p&gt;每一个node.js执行文件，都自动创建一个module对象，同时，module对象会创建一个叫exports的属性，初始化的值是 {}  &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;exports其实是指向module.exports的引用；&lt;/li&gt;
