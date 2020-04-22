@@ -1,3 +1,4 @@
+http://www.sunmou.cn/database/mysql-ubuntu/
 http://www.sunmou.cn/nodejs/commonjs-exports/
 http://www.sunmou.cn/myblog/deploy-blog/
 http://www.sunmou.cn/design/material-design/
@@ -48,6 +49,7 @@ http://www.sunmou.cn/tags/cpp/
 http://www.sunmou.cn/tags/dagger-2/
 http://www.sunmou.cn/tags/data-format/
 http://www.sunmou.cn/tags/data-binding/
+http://www.sunmou.cn/tags/database/
 http://www.sunmou.cn/tags/di/
 http://www.sunmou.cn/tags/electron/
 http://www.sunmou.cn/tags/enum/
@@ -70,6 +72,7 @@ http://www.sunmou.cn/tags/livedata/
 http://www.sunmou.cn/tags/map/
 http://www.sunmou.cn/tags/markdown/
 http://www.sunmou.cn/tags/meta/
+http://www.sunmou.cn/tags/mysql/
 http://www.sunmou.cn/tags/n-api/
 http://www.sunmou.cn/tags/native/
 http://www.sunmou.cn/tags/nginx/

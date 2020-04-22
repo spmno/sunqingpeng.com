@@ -1,4 +1,233 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[孙某 Blog]]></title><description><![CDATA[技术文章随笔，前沿技术，Android、Flutter、React、Gatsby、C++、JavaScript、嵌入式、汽车电子]]></description><link>http://www.sunmou.cn</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 06 Apr 2020 07:43:17 GMT</lastBuildDate><item><title><![CDATA[ubuntu mysql安装及简单使用]]></title><description><![CDATA[用apt安装所需要的库： 初始化配置：  新建数据库： 常用操作： 创建数据库 create database dbname charset=utf8; 删除数据库 drop database dbname; 切换数据库 use dbname; 查看当前选择的数据库 select…]]></description><link>http://www.sunmou.cn/database/mysql-ubuntu/</link><guid isPermaLink="false">http://www.sunmou.cn/database/mysql-ubuntu/</guid><pubDate>Mon, 06 Apr 2020 10:46:15 GMT</pubDate><content:encoded>&lt;ol&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[孙某 Blog]]></title><description><![CDATA[技术文章随笔，前沿技术，Android、Flutter、React、Gatsby、C++、JavaScript、嵌入式、汽车电子]]></description><link>http://www.sunmou.cn</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 22 Apr 2020 10:00:57 GMT</lastBuildDate><item><title><![CDATA[sequelize简单使用]]></title><description><![CDATA[测试配置是否正确： 建立表，有两种方法： 调用 sequelize.define(modelName, attributes, options) 扩展 Model 并调用 init(attributes, options…]]></description><link>http://www.sunmou.cn/database/sequelize/</link><guid isPermaLink="false">http://www.sunmou.cn/database/sequelize/</guid><pubDate>Mon, 06 Apr 2020 15:46:15 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;安装：
+    ```
+    npm install --save sequelize
+    
+    你还必须手动为所选数据库安装驱动程序：
+    选择以下之一:
+    npm install --save pg pg-hstore # Postgres
+    npm install --save mysql2
+    npm install --save mariadb
+    npm install --save sqlite3
+    npm install --save tedious # Microsoft SQL Server
+    ```&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;测试配置是否正确：&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;async function test(){
+    try {
+        const sequelize = new Sequelize(databaseName, userName, password, {
+            host: &amp;#39;localhost&amp;#39;,
+            dialect: &amp;#39;mysql&amp;#39;
+        });
+        await sequelize.authenticate();
+        console.log(&amp;#39;Connection has been established successful.&amp;#39;);
+    } catch(error) {
+        console.error(&amp;#39;Unable to connect to database: &amp;#39;, error);
+    }
+}
+
+test();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;建立表，有两种方法：&lt;br&gt;
+调用 sequelize.define(modelName, attributes, options)&lt;br&gt;
+扩展 Model 并调用 init(attributes, options)  &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;使用 sequelize.define:
+const { Sequelize, DataTypes } = require(&amp;#39;sequelize&amp;#39;);
+const sequelize = new Sequelize(&amp;#39;sqlite::memory:&amp;#39;);
+
+const User = sequelize.define(&amp;#39;User&amp;#39;, {
+// 在这里定义模型属性
+firstName: {
+    type: DataTypes.STRING,
+    allowNull: false
+},
+lastName: {
+    type: DataTypes.STRING
+    // allowNull 默认为 true
+}
+}, {
+// 这是其他模型参数
+});
+
+// `sequelize.define` 会返回模型
+console.log(User === sequelize.models.User); // true
+------------------------------------------------------------------------
+扩展 Model
+const { Sequelize, DataTypes, Model } = require(&amp;#39;sequelize&amp;#39;);
+const sequelize = new Sequelize(&amp;#39;sqlite::memory&amp;#39;);
+
+class User extends Model {}
+
+User.init({
+// 在这里定义模型属性
+firstName: {
+    type: DataTypes.STRING,
+    allowNull: false
+},
+lastName: {
+    type: DataTypes.STRING
+    // allowNull 默认为 true
+}
+}, {
+// 这是其他模型参数
+sequelize, // 我们需要传递连接实例
+modelName: &amp;#39;User&amp;#39; // 我们需要选择模型名称
+});
+
+// 定义的模型是类本身
+console.log(User === sequelize.models.User); // true&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;实例操作：
+创建实例：&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;const jane = User.build({ name: &amp;quot;Jane&amp;quot; });&lt;/code&gt;&lt;br&gt;
+保存数据：
+&lt;code class=&quot;language-text&quot;&gt;await jane.save();&lt;/code&gt;&lt;br&gt;
+创建并保存：&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;const jane = await User.create({ name: &amp;quot;Jane&amp;quot; });&lt;/code&gt;&lt;br&gt;
+删除实例：&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;await jane.destroy();&lt;/code&gt;&lt;br&gt;
+select查询：&lt;br&gt;
+查询全部&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;const users = await User.findAll();&lt;/code&gt;&lt;br&gt;
+根据属性查询&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Model.findAll({
+attributes: [&amp;#39;foo&amp;#39;, &amp;#39;bar&amp;#39;]
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;where查询：
+&lt;code class=&quot;language-text&quot;&gt;Post.findAll({
+    where: {
+        authorId: 2
+    }
+    });&lt;/code&gt;
+传递多个条件：&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Post.findAll({
+  where: {
+    authorId: 12
+    status: &amp;#39;active&amp;#39;
+  }
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;带操作符：&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const { Op } = require(&amp;quot;sequelize&amp;quot;);
+Post.findAll({
+  where: {
+    [Op.or]: [
+      { authorId: 12 },
+      { authorId: 13 }
+    ]
+  }
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;通用操作符：  &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;  [Op.eq]: 3,                              // = 3
+  [Op.ne]: 20,                             // != 20
+  [Op.is]: null,                           // IS NULL
+  [Op.not]: true,                          // IS NOT TRUE
+  [Op.or]: [5, 6],                         // (someAttribute = 5) OR (someAttribute = 6)
+
+  // 使用方言特定的列标识符 (以下示例中使用 PG):
+  [Op.col]: &amp;#39;user.organization_id&amp;#39;,        // = &amp;quot;user&amp;quot;.&amp;quot;organization_id&amp;quot;
+
+  // 数字比较
+  [Op.gt]: 6,                              // &amp;gt; 6
+  [Op.gte]: 6,                             // &amp;gt;= 6
+  [Op.lt]: 10,                             // &amp;lt; 10
+  [Op.lte]: 10,                            // &amp;lt;= 10
+  [Op.between]: [6, 10],                   // BETWEEN 6 AND 10
+  [Op.notBetween]: [11, 15],               // NOT BETWEEN 11 AND 15
+
+  // 其它操作符
+
+  [Op.all]: sequelize.literal(&amp;#39;SELECT 1&amp;#39;), // &amp;gt; ALL (SELECT 1)
+
+  [Op.in]: [1, 2],                         // IN [1, 2]
+  [Op.notIn]: [1, 2],                      // NOT IN [1, 2]
+
+  [Op.like]: &amp;#39;%hat&amp;#39;,                       // LIKE &amp;#39;%hat&amp;#39;
+  [Op.notLike]: &amp;#39;%hat&amp;#39;,                    // NOT LIKE &amp;#39;%hat&amp;#39;
+  [Op.startsWith]: &amp;#39;hat&amp;#39;,                  // LIKE &amp;#39;hat%&amp;#39;
+  [Op.endsWith]: &amp;#39;hat&amp;#39;,                    // LIKE &amp;#39;%hat&amp;#39;
+  [Op.substring]: &amp;#39;hat&amp;#39;,                   // LIKE &amp;#39;%hat%&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;UPDATE数据：  &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;await User.update({ lastName: &amp;quot;Doe&amp;quot; }, {
+    where: {
+    lastName: null
+    }
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;DELETE数据：&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;await User.destroy({
+    where: {
+        firstName: &amp;quot;Jane&amp;quot;
+    }
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;// 截断表格&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;await User.destroy({
+    truncate: true
+});  &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;排序和分组：&lt;br&gt;
+Sequelize 提供了 order and group 参数,来与 ORDER BY 和 GROUP BY 一起使用.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Subtask.findAll({
+    order: [
+        // 将转义 title 并针对有效方向列表进行降序排列
+        [&amp;#39;title&amp;#39;, &amp;#39;DESC&amp;#39;],
+        // 将按最大年龄进行升序排序
+        sequelize.fn(&amp;#39;max&amp;#39;, sequelize.col(&amp;#39;age&amp;#39;)),
+        // 将按最大年龄进行降序排序
+        [sequelize.fn(&amp;#39;max&amp;#39;, sequelize.col(&amp;#39;age&amp;#39;)), &amp;#39;DESC&amp;#39;],
+        // 将按 otherfunction(`col1`, 12, &amp;#39;lalala&amp;#39;) 进行降序排序
+        [sequelize.fn(&amp;#39;otherfunction&amp;#39;, sequelize.col(&amp;#39;col1&amp;#39;), 12, &amp;#39;lalala&amp;#39;), &amp;#39;DESC&amp;#39;],
+        // 将使用模型名称作为关联名称按关联模型的 createdAt 排序.
+        [Task, &amp;#39;createdAt&amp;#39;, &amp;#39;DESC&amp;#39;],
+        // 将使用模型名称作为关联名称通过关联模型的 createdAt 排序.
+        [Task, Project, &amp;#39;createdAt&amp;#39;, &amp;#39;DESC&amp;#39;],
+        // 将使用关联名称按关联模型的 createdAt 排序.
+    [&amp;#39;Task&amp;#39;, &amp;#39;createdAt&amp;#39;, &amp;#39;DESC&amp;#39;],
+        // 将使用关联的名称按嵌套的关联模型的 createdAt 排序.
+        [&amp;#39;Task&amp;#39;, &amp;#39;Project&amp;#39;, &amp;#39;createdAt&amp;#39;, &amp;#39;DESC&amp;#39;],
+        // 将使用关联对象按关联模型的 createdAt 排序. (首选方法)
+        [Subtask.associations.Task, &amp;#39;createdAt&amp;#39;, &amp;#39;DESC&amp;#39;],
+        // 将使用关联对象按嵌套关联模型的 createdAt 排序. (首选方法)
+        [Subtask.associations.Task, Task.associations.Project, &amp;#39;createdAt&amp;#39;, &amp;#39;DESC&amp;#39;],
+        // 将使用简单的关联对象按关联模型的 createdAt 排序.
+        [{model: Task, as: &amp;#39;Task&amp;#39;}, &amp;#39;createdAt&amp;#39;, &amp;#39;DESC&amp;#39;],
+        // 将由嵌套关联模型的 createdAt 简单关联对象排序.
+        [{model: Task, as: &amp;#39;Task&amp;#39;}, {model: Project, as: &amp;#39;Project&amp;#39;}, &amp;#39;createdAt&amp;#39;, &amp;#39;DESC&amp;#39;]
+    ],
+    // 将按最大年龄降序排列
+    order: sequelize.literal(&amp;#39;max(age) DESC&amp;#39;),
+    // 如果忽略方向,则默认升序,将按最大年龄升序排序
+    order: sequelize.fn(&amp;#39;max&amp;#39;, sequelize.col(&amp;#39;age&amp;#39;)),
+    // 如果省略方向,则默认升序, 将按年龄升序排列
+    order: sequelize.col(&amp;#39;age&amp;#39;),
+    // 将根据方言随机排序(但不是 fn(&amp;#39;RAND&amp;#39;) 或 fn(&amp;#39;RANDOM&amp;#39;))
+    order: sequelize.random()
+});
+
+Foo.findOne({  
+    order: [  
+        // 将返回 `name`  
+        [&amp;#39;name&amp;#39;],  
+        // 将返回 `username` DESC  
+        [&amp;#39;username&amp;#39;, &amp;#39;DESC&amp;#39;],  
+        // 将返回 max(`age`)  
+        sequelize.fn(&amp;#39;max&amp;#39;, sequelize.col(&amp;#39;age&amp;#39;)),  
+        // 将返回 max(`age`) DESC  
+        [sequelize.fn(&amp;#39;max&amp;#39;, sequelize.col(&amp;#39;age&amp;#39;)), &amp;#39;DESC&amp;#39;],  
+        // 将返回 otherfunction(`col1`, 12, &amp;#39;lalala&amp;#39;) DESC  
+        [sequelize.fn(&amp;#39;otherfunction&amp;#39;, sequelize.col(&amp;#39;col1&amp;#39;), 12, &amp;#39;lalala&amp;#39;), &amp;#39;DESC&amp;#39;],  
+        // 将返回 otherfunction(awesomefunction(`col`)) DESC, 这种嵌套可能是无限的!  
+        [sequelize.fn(&amp;#39;otherfunction&amp;#39;, sequelize.fn(&amp;#39;awesomefunction&amp;#39;, sequelize.col(&amp;#39;col&amp;#39;))), &amp;#39;DESC&amp;#39;]  
+    ]
+});  &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;限制和分页：
+// 提取10个实例/行&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;Project.findAll({ limit: 10 });&lt;/code&gt;&lt;br&gt;
+// 跳过8个实例/行&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;Project.findAll({ offset: 8 });&lt;/code&gt;&lt;br&gt;
+// 跳过5个实例,然后获取5个实例&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;Project.findAll({ offset: 5, limit: 5 });&lt;/code&gt;  &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[ubuntu mysql安装及简单使用]]></title><description><![CDATA[用apt安装所需要的库： 初始化配置：  新建数据库： 常用操作： 创建数据库 create database dbname charset=utf8; 删除数据库 drop database dbname; 切换数据库 use dbname; 查看当前选择的数据库 select…]]></description><link>http://www.sunmou.cn/database/mysql-ubuntu/</link><guid isPermaLink="false">http://www.sunmou.cn/database/mysql-ubuntu/</guid><pubDate>Mon, 06 Apr 2020 10:46:15 GMT</pubDate><content:encoded>&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;用apt安装所需要的库：&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;sudo apt install mysql-server          //服务端
@@ -1986,7 +2215,15 @@ Windows装BIOS时间认为是本地时间，中国在东8区，所在是GMT+8。
 &lt;code class=&quot;language-text&quot;&gt;HKEY_LOCAL_MACHINE/SYSTEM/CurrentControlSet/Control/TimeZoneInformation/&lt;/code&gt;&lt;br&gt;
 在右边窗口，右键新建REG_DWORD值。&lt;br&gt;
 名称RealTimeIsUniversal，值为1。  &lt;/p&gt;
-&lt;p&gt;亲试好用。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Seo常用标签及优化]]></title><description><![CDATA[网站搭好了，最重要的就是流量，如何获得流量，一是自己宣传，再就是让搜索引擎能找到你。 首先是标题，标题一定是对网站最好的定位。比如京东的标题：  然后就是在head中，加入相关的meta标签。 什么是meta标签：  meta主要分为二部分，name：名称，content…]]></description><link>http://www.sunmou.cn/web/seo/</link><guid isPermaLink="false">http://www.sunmou.cn/web/seo/</guid><pubDate>Thu, 27 Feb 2020 22:54:03 GMT</pubDate><content:encoded>&lt;p&gt;网站搭好了，最重要的就是流量，如何获得流量，一是自己宣传，再就是让搜索引擎能找到你。&lt;/p&gt;
+&lt;p&gt;亲试好用。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[ImageMagick报错convert-im6.q16: not authorized解决方法]]></title><description><![CDATA[修改配置文件/etc/ImageMagick-6/policy.xml
+ 找到这一行：  修改为：  在下面再增加一行：]]></description><link>http://www.sunmou.cn/os/image-magick/</link><guid isPermaLink="false">http://www.sunmou.cn/os/image-magick/</guid><pubDate>Sat, 29 Feb 2020 09:54:03 GMT</pubDate><content:encoded>&lt;p&gt;修改配置文件/etc/ImageMagick-6/policy.xml
+&lt;code class=&quot;language-text&quot;&gt;vim /etc/ImageMagick-6/policy.xml&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;找到这一行：&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;policy domain=&amp;quot;coder&amp;quot; rights=&amp;quot;none&amp;quot; pattern=&amp;quot;PDF&amp;quot; /&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;修改为：&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;policy domain=&amp;quot;coder&amp;quot; rights=&amp;quot;read|write&amp;quot; pattern=&amp;quot;PDF&amp;quot; /&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;在下面再增加一行：&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;policy domain=&amp;quot;coder&amp;quot; rights=&amp;quot;read|write&amp;quot; pattern=&amp;quot;LABEL&amp;quot; /&amp;gt;&lt;/code&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Seo常用标签及优化]]></title><description><![CDATA[网站搭好了，最重要的就是流量，如何获得流量，一是自己宣传，再就是让搜索引擎能找到你。 首先是标题，标题一定是对网站最好的定位。比如京东的标题：  然后就是在head中，加入相关的meta标签。 什么是meta标签：  meta主要分为二部分，name：名称，content…]]></description><link>http://www.sunmou.cn/web/seo/</link><guid isPermaLink="false">http://www.sunmou.cn/web/seo/</guid><pubDate>Thu, 27 Feb 2020 22:54:03 GMT</pubDate><content:encoded>&lt;p&gt;网站搭好了，最重要的就是流量，如何获得流量，一是自己宣传，再就是让搜索引擎能找到你。&lt;/p&gt;
 &lt;p&gt;首先是标题，标题一定是对网站最好的定位。比如京东的标题：&lt;br&gt;
 &lt;code class=&quot;language-text&quot;&gt;&amp;lt;title&amp;gt;京东(JD.COM)-正品低价、品质保障、配送及时、轻松购物！&amp;lt;/title&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;然后就是在head中，加入相关的meta标签。&lt;/p&gt;

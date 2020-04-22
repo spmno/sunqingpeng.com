@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/sequelize/","result":{"data":{"site":{"id":"Site","siteMetadata":{"title":"孙某 Blog"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"id":"a2be55d3-a07e-57a0-86d9-1adc8d104b0a","fields":{"slug":"/database/sequelize/"},"frontmatter":{"title":"sequelize简单使用"}}}]}},"pageContext":{"tag":"sequelize"}}}
