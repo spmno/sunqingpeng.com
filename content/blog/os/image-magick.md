@@ -1,5 +1,5 @@
 ---
-title: ImageMagick报错convert-im6.q16: not authorized解决方法
+title: "ImageMagick报错convert-im6.q16: not authorized解决方法"
 date: "2020-02-29T09:54:03.284Z"
 description: "ImageMagick报错convert-im6.q16: not authorized解决方法"
 tags: ["linux", "ImageMagick"]
