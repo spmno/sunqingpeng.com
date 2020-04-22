@@ -11,13 +11,13 @@ tags: ["linux", "ImageMagick"]
  
 找到这一行：
  
-<policy domain="coder" rights="none" pattern="PDF" />
+`<policy domain="coder" rights="none" pattern="PDF" />`
  
 修改为：
  
-<policy domain="coder" rights="read|write" pattern="PDF" />
+`<policy domain="coder" rights="read|write" pattern="PDF" />`
  
 在下面再增加一行：
  
-<policy domain="coder" rights="read|write" pattern="LABEL" />
+`<policy domain="coder" rights="read|write" pattern="LABEL" />`
 
