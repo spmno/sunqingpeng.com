@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `孙某 Blog`,
+    title: `孙庆鹏的Blog`,
     author: `孙庆鹏`,
     description: `技术文章随笔，前沿技术，Android、Flutter、React、Gatsby、C++、JavaScript、嵌入式、汽车电子`,
     keywords: `前沿技术，Android，Flutter，React，Gatsby，C++，JavaScript，嵌入式，汽车电子`,
-    siteUrl: `http://www.sunmou.cn`,
+    siteUrl: `http://www.sunqingpeng.com`,
     social: {
       weixin: `zhongyichengxuyuan`,
     },
@@ -59,7 +59,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `孙某 Blog`,
+        name: `孙庆鹏的Blog`,
         short_name: `sunqp`,
         start_url: `/`,
         background_color: `#ffffff`,

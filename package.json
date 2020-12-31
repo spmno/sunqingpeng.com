@@ -44,7 +44,7 @@
   "devDependencies": {
     "prettier": "^1.19.1"
   },
-  "homepage": "www.sunmou.cn",
+  "homepage": "www.sunqingpeng.com",
   "keywords": [
     "gatsby"
   ],
@@ -52,7 +52,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/spmno/sunmou"
+    "url": "https://github.com/spmno/sunqingpeng.com"
   },
   "scripts": {
     "build": "gatsby build",
